@@ -5,21 +5,18 @@ https://tlfong01.blog/2019/04/26/ph-4502c-ph-meter-calibration-notes/
 
 
 <b> uart_test06 tlfong01 2019apr08hkt1603 ***
+ Computer = Rpi3B+
+ Linux    = $ hostnamectl = raspberrypi Raspbian GNU/Linux 9 (stretch) Linux 4.14.34-v7+ arm 
+ Python   = >>> sys.version = 3.5.3 Jan 19 2017
 
-# Computer = Rpi3B+
-# Linux    = $ hostnamectl = raspberrypi Raspbian GNU/Linux 9 (stretch) Linux 4.14.34-v7+ arm 
-# Python   = >>> sys.version = 3.5.3 Jan 19 2017
-
-# Test 1   - repeatWriteBytes() - UART port repeatedly send out bytes.  
-# Function - Repeat many times sending bytes, pause after each bytes.
-
-# Test 2   - loopBackTest() - UART port send and receive bytes.
-# Function - Send one bytes to TX, wait some time (Note 1), then read bytes back from RX. 
-# Setup    - Connet Tx pin to Rx pin to form a loop.
-
-# Note 1
-# Bolutek BlueTooth BC04 needs at least 10mS to respond
-
+ Test 1   - repeatWriteBytes() - UART port repeatedly send out bytes.  
+ Function - Repeat many times sending bytes, pause after each bytes.
+ Test 2   - loopBackTest() - UART port send and receive bytes.
+ Function - Send one bytes to TX, wait some time (Note 1), then read bytes back from RX. 
+ Setup    - Connet Tx pin to Rx pin to form a loop.
+ Note 1
+ Bolutek BlueTooth BC04 needs at least 10mS to respond
+```
 from   time import sleep
 import serial
 
@@ -69,7 +66,7 @@ def serialPortLoopBack(serialPort, writeBytes, maxBytesLength, waitTime):
 setSerialPortBaudRate(serialPort0, 9600)
 #repeatWriteBytes(serialPort0, b'AT\r\n', 0.01, 200000000)
 serialPortLoopBack(serialPort0, b'AT\r\n', 32, 0.030)
-
+```
 ''' Sample output  tlfong01 2019apr0801
 >>> 
 === RESTART: /home/pi/Python_Programs/test1193/uart_test02_2019apr0801.py ===
