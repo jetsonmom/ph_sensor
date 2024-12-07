@@ -4,7 +4,7 @@ UART Self Test Program
 https://tlfong01.blog/2019/04/26/ph-4502c-ph-meter-calibration-notes/
 
 
-# uart_test06 tlfong01 2019apr08hkt1603 ***
+<b> uart_test06 tlfong01 2019apr08hkt1603 ***
 
 # Computer = Rpi3B+
 # Linux    = $ hostnamectl = raspberrypi Raspbian GNU/Linux 9 (stretch) Linux 4.14.34-v7+ arm 
