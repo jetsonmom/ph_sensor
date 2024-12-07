@@ -1,5 +1,5 @@
 # ph_sensor
-<b>  이 링크가 제일 좋은 듯
+<b>  이 링크가 제일 좋은 듯...
 UART Self Test Program
 https://tlfong01.blog/2019/04/26/ph-4502c-ph-meter-calibration-notes/
 
